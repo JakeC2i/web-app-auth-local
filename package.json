@@ -1,0 +1,52 @@
+{
+  "name": "@jchpro/web-app-auth-local",
+  "version": "0.1.0",
+  "description": "Express Web Application local authorization",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev-app": "ts-node ./dev/app",
+    "dev-app-watch": "nodemon",
+    "build": "tsc"
+  },
+  "keywords": [
+    "express",
+    "web",
+    "application",
+    "authorization",
+    "local",
+    "passport"
+  ],
+  "author": "Jakub Chmielewski",
+  "license": "MIT",
+  "dependencies": {
+    "@jchpro/web-app-core": "^0.1.0",
+    "@jchpro/web-app-mongoose": "^0.1.3",
+    "brit": "^0.5.0",
+    "connect-ensure-login": "^0.1.1",
+    "connect-mongodb-session": "^2.1.1",
+    "express": "^4.17.0",
+    "express-session": "^1.16.1",
+    "mongoose": "^5.5.10",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.130",
+    "@types/mongoose": "^5.5.1",
+    "@types/passport": "^1.0.0",
+    "@types/passport-local": "^1.0.33",
+    "nodemon": "^1.19.0",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.5"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "./src",
+      "./dev"
+    ],
+    "ext": "ts",
+    "exec": "ts-node ./dev/app"
+  }
+}
